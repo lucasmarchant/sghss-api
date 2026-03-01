@@ -32,4 +32,31 @@ public class Paciente {
         this.telefone = dadosPaciente.telefone();
         this.endereco = new Endereco(dadosPaciente.endereco());
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public Paciente() {
+    }
 }
