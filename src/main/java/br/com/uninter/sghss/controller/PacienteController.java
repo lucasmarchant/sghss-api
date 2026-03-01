@@ -4,6 +4,7 @@ import br.com.uninter.sghss.paciente.DadosCadastroPaciente;
 import br.com.uninter.sghss.paciente.Paciente;
 import br.com.uninter.sghss.paciente.PacienteRepository;
 import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class PacienteController {
     private PacienteRepository repository;
     @PostMapping
     @Transactional
-    public void cadastrar(@RequestBody DadosCadastroPaciente dadosPaciente){
+    public void cadastrar(@RequestBody @Valid DadosCadastroPaciente dadosPaciente){
         repository.save(new Paciente(dadosPaciente));
     }
 

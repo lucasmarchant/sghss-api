@@ -1,12 +1,25 @@
 package br.com.uninter.sghss.paciente;
 
 import br.com.uninter.sghss.endereco.DadosEndereco;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 public record DadosCadastroPaciente(
 
+        @NotBlank
         String nome,
+        @NotBlank
+        @Email
         String email,
+        @NotBlank
         String telefone,
+        @NotBlank
+        @Pattern(regexp = "\\d{11}", message = "O CPF deve conter exatamente 11 dígitos numéricos")
         String cpf,
+        @NotNull(message = "Endereço é obrigatório")
+        @Valid // IMPORTANTE: Isso faz o Spring validar os campos dentro de DadosEndereco
         DadosEndereco endereco) {
 }
