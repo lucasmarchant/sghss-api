@@ -1,9 +1,6 @@
 package br.com.uninter.sghss.controller;
 
-import br.com.uninter.sghss.paciente.DadosCadastroPaciente;
-import br.com.uninter.sghss.paciente.DadosListagemPaciente;
-import br.com.uninter.sghss.paciente.Paciente;
-import br.com.uninter.sghss.paciente.PacienteRepository;
+import br.com.uninter.sghss.paciente.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +26,13 @@ public class PacienteController {
     @GetMapping
     public Page<DadosListagemPaciente> listar(@PageableDefault(size = 10) Pageable paginacao){
         return repository.findAll(paginacao).map(DadosListagemPaciente::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizaCadastroPaciente dadosPaciente){
+        var paciente = repository.getReferenceById(dadosPaciente.id());
+        paciente.atualizarInformacoes(dadosPaciente);
     }
 
 }

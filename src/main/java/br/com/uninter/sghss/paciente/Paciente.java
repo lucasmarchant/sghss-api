@@ -59,4 +59,17 @@ public class Paciente {
 
     public Paciente() {
     }
+
+    public void atualizarInformacoes(DadosAtualizaCadastroPaciente dadosPaciente) {
+        if(dadosPaciente.nome() != null) {
+            this.nome = dadosPaciente.nome();
+        }
+        if(dadosPaciente.telefone() != null) {
+            this.telefone = dadosPaciente.telefone();
+        }
+        if(dadosPaciente.endereco() != null) {
+            this.endereco.atualizarInformacoes(dadosPaciente.endereco());
+        }
+
+    }
 }
