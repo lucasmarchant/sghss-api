@@ -1,4 +1,4 @@
-package br.com.uninter.sghss.medico;
+package br.com.uninter.sghss.domain.medico;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

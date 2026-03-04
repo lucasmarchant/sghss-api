@@ -1,7 +1,6 @@
-package br.com.uninter.sghss.paciente;
+package br.com.uninter.sghss.domain.paciente;
 
-import br.com.uninter.sghss.endereco.DadosEndereco;
-import br.com.uninter.sghss.endereco.Endereco;
+import br.com.uninter.sghss.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizaCadastroPaciente(

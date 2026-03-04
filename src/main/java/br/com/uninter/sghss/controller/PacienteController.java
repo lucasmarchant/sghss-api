@@ -1,6 +1,7 @@
 package br.com.uninter.sghss.controller;
 
-import br.com.uninter.sghss.paciente.*;
+import br.com.uninter.sghss.domain.paciente.*;
+import br.com.uninter.sghss.domain.paciente.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("pacientes")
@@ -57,5 +56,4 @@ public class PacienteController {
         var paciente = repository.getReferenceById(id);
         return ResponseEntity.ok(new DadosDetalhamentoPaciente(paciente));
     }
-
 }

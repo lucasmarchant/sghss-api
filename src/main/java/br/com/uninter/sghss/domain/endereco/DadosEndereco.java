@@ -1,4 +1,4 @@
-package br.com.uninter.sghss.endereco;
+package br.com.uninter.sghss.domain.endereco;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

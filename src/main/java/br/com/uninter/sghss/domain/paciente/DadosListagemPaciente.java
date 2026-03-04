@@ -1,4 +1,4 @@
-package br.com.uninter.sghss.paciente;
+package br.com.uninter.sghss.domain.paciente;
 
 public record DadosListagemPaciente(Long id,String nome,String email,String cpf) {
 

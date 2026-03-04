@@ -1,8 +1,7 @@
-package br.com.uninter.sghss.paciente;
+package br.com.uninter.sghss.domain.paciente;
 
-import br.com.uninter.sghss.endereco.Endereco;
+import br.com.uninter.sghss.domain.endereco.Endereco;
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

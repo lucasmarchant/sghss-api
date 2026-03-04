@@ -1,6 +1,5 @@
-package br.com.uninter.sghss.paciente;
+package br.com.uninter.sghss.domain.paciente;
 
-import aj.org.objectweb.asm.commons.Remapper;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

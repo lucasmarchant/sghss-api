@@ -1,7 +1,7 @@
 package br.com.uninter.sghss.controller;
 
-import br.com.uninter.sghss.medico.*;
-import br.com.uninter.sghss.paciente.DadosDetalhamentoPaciente;
+import br.com.uninter.sghss.domain.medico.*;
+import br.com.uninter.sghss.domain.medico.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

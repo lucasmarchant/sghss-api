@@ -1,6 +1,6 @@
-package br.com.uninter.sghss.paciente;
+package br.com.uninter.sghss.domain.paciente;
 
-import br.com.uninter.sghss.endereco.Endereco;
+import br.com.uninter.sghss.domain.endereco.Endereco;
 
 public record DadosDetalhamentoPaciente(
 

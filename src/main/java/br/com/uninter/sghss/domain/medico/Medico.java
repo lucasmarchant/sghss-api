@@ -1,6 +1,6 @@
-package br.com.uninter.sghss.medico;
+package br.com.uninter.sghss.domain.medico;
 
-import br.com.uninter.sghss.endereco.Endereco;
+import br.com.uninter.sghss.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
