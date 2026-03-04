@@ -1,6 +1,7 @@
 package br.com.uninter.sghss.controller;
 
 import br.com.uninter.sghss.medico.*;
+import br.com.uninter.sghss.paciente.DadosDetalhamentoPaciente;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,12 @@ public class MedicoController {
         medico.excluir();
 
         return ResponseEntity.noContent().build();
+    }
+
+    //Endpoint para detalhar o medico passando o id como path param
+    @GetMapping("/{id}")
+    public ResponseEntity detalhar(@PathVariable Long id){
+        var medico = repository.getReferenceById(id);
+        return ResponseEntity.ok(new DadosDetalhamentoMedico(medico));
     }
 }
