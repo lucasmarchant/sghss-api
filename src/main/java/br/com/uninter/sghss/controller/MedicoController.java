@@ -26,6 +26,7 @@ public class MedicoController {
 
     @GetMapping
     public ResponseEntity <List<DadosListagemMedico>> listar(){
+
         var lista = repository.findAllByAtivoTrue().stream().map(DadosListagemMedico::new).toList();
         return ResponseEntity.ok(lista);
     }
