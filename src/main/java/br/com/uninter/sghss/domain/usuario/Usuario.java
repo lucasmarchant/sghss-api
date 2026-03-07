@@ -17,6 +17,13 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Usuario implements UserDetails {
+    public Long getId() {
+        return id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
