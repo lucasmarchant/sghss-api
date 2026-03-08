@@ -15,6 +15,10 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(of = "id")
 public class Paciente {
 
+    public Boolean getAtivo() {
+        return ativo;
+    }
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
